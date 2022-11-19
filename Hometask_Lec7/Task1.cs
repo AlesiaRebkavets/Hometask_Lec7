@@ -84,7 +84,7 @@ namespace Hometask_Lec7
     {
         private string canSwim;                                                   // field of the class
 
-        public Dolphin(string kindOfAnimal, string nickname, int age, bool isHungry, string canSwim) : base(kindOfAnimal, nickname, age, isHungry)       // set initial object values data overriding method of the abstract class
+        public Dolphin(string kindOfAnimal, string nickname, int age, bool isHungry, string canSwim) : base(kindOfAnimal, nickname, age, isHungry)       // set initial object parameters' values overriding method of the abstract class
         {
             this.canSwim = canSwim;
         }
@@ -110,7 +110,7 @@ namespace Hometask_Lec7
     {
         private string coatLength;                                                 // field of the class
 
-        public Cat(string kindOfAnimal, string nickname, int age, bool isHungry, string coatLength) : base(kindOfAnimal, nickname, age, isHungry)        // set initial object values data overriding method of the abstract class
+        public Cat(string kindOfAnimal, string nickname, int age, bool isHungry, string coatLength) : base(kindOfAnimal, nickname, age, isHungry)        // set initial object parameters' values overriding method of the abstract class
         {
             this.coatLength = coatLength;
         }

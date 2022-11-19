@@ -1,25 +1,22 @@
-﻿using System.Threading.Tasks;
+﻿using Hometask_Lec7.Task3;
+using System.Threading.Tasks;
 
 namespace Hometask_Lec7
 {
-    public class Polaroid
+    public class Polaroid: Device
     {
         private int paperWidth;
         private int paperHeight;
         private double numberOfPixelsInCamera;
-        private string? modelName;
-        private decimal price;
 
-        public Polaroid(int paperWidth, int paperHeight, double numberOfPixelsInCamera, string? modelName, decimal price)
+        public Polaroid(string? modelName, decimal price, int paperWidth, int paperHeight, double numberOfPixelsInCamera): base(modelName, price)    // set initial object parameters' values overriding method of the abstract class
         {
             this.paperWidth = paperWidth;
             this.paperHeight = paperHeight;
             this.numberOfPixelsInCamera = numberOfPixelsInCamera;
-            this.modelName = modelName;
-            this.price = price;
         }
 
-        public string Description
+        public override string Description                        // getting polaroid's price, model name and number of pixels in camera
         {
             get
             {
@@ -37,14 +34,9 @@ namespace Hometask_Lec7
             Console.WriteLine("Printing...");
         }
 
-        public void TurnOn()
+        public override void TurnOn()                                 // overloaded method to turn on the device
         {
             Console.WriteLine("Press right side button");
-        }
-
-        public void TunrnOff()
-        {
-            Console.WriteLine("Press Turn Off button");
         }
     }
 }

@@ -1,23 +1,20 @@
-﻿using System.Threading.Tasks;
+﻿using Hometask_Lec7.Task3;
+using System.Threading.Tasks;
 
 namespace Hometask_Lec7
 {
-    public class Printer
+    public class Printer: Device
     {
         private int paperWidth;
         private int paperHeight;
-        private string? modelName;
-        private decimal price;
 
-        public Printer(string? modelName, decimal price, int paperWidth, int paperHeight)
+        public Printer(string? modelName, decimal price, int paperWidth, int paperHeight): base(modelName, price)     // set initial object parameters' values overriding method of the abstract class
         {
-            this.modelName = modelName;
-            this.price = price;
             this.paperWidth = paperWidth;
             this.paperHeight = paperHeight;
         }
 
-        public string Description
+        public override string Description              // getting printer's price and model name 
         {
             get
             {
@@ -30,14 +27,9 @@ namespace Hometask_Lec7
             Console.WriteLine("Printing...");
         }
 
-        public void TurnOn()
+        public override void TurnOn()                           // overloaded method to turn on the device
         {
             Console.WriteLine("Press button at the top");
-        }
-
-        public void TunrnOff()
-        {
-            Console.WriteLine("Press Turn Off button");
-        }
+        }       
     }
 }
