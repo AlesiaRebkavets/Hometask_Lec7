@@ -18,18 +18,13 @@ namespace Hometask_Lec7
         {
             get
             {
-                return $"Price: {price}, model:{modelName}, number of pixels in camera: {numberOfPixelsInCamera}";
+                return $"Price: {price}, model: {modelName}, number of pixels in camera: {numberOfPixelsInCamera}";
             }
         }
 
         public void TakePhoto()
         {
-            Console.WriteLine("Press black button at the top and photo is ready");
-        }
-
-        public void Print()
-        {
-            Console.WriteLine("Printing...");
+            Console.WriteLine("Press black button at the top and photo is ready\n");  // overloaded method of interface 'ITakePhoto'
         }
 
         public override void TurnOn()                                 // overloaded method to turn on the device

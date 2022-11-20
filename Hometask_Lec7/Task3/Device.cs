@@ -44,11 +44,14 @@ namespace Hometask_Lec7.Task3
     }
     interface IPrint
     {
-        public void Print();
+        public void Print()
+        {
+            Console.WriteLine("Printing...");                // outputs printing action
+        }
     }
 
     interface ITakePhoto
     {
-        public void TakePhoto();
+        public void TakePhoto();        // the method is overriden in classes 'MobilePhone' and 'Polaroid'
     }
 }

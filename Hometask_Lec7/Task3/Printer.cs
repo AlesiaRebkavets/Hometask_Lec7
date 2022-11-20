@@ -14,18 +14,13 @@ namespace Hometask_Lec7
         {
             get
             {
-                return $"Price: {price}, model:{modelName}";
+                return $"Price: {price}, model: {modelName} \n";
             }
-        }
-
-        public void Print()
-        {
-            Console.WriteLine("Printing...");
         }
 
         public override void TurnOn()                           // overloaded method to turn on the device
         {
-            Console.WriteLine("Press button at the top");
+            Console.WriteLine("Press button at the top\n");
         }       
     }
 

@@ -20,12 +20,12 @@ namespace Hometask_Lec7
         {
                 get
                 {
-                    return $"Price: {price}, model:{modelName}, number of pixels in camera: {numberOfPixelsInCamera}";
+                    return $"Price: {price}, model: {modelName}, number of pixels in camera: {numberOfPixelsInCamera}";
                 }
             }
 
-            public void TakePhoto()
-            {
+            public void TakePhoto()                                                     // overloaded method of interface 'ITakePhoto'
+        {
                 Console.WriteLine("Press button on the screen and photo is ready");
             }
 
