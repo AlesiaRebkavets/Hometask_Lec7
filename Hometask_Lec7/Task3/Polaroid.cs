@@ -3,16 +3,14 @@ using System.Threading.Tasks;
 
 namespace Hometask_Lec7
 {
-    public class Polaroid: Device
+    public class Polaroid: PrintingDevice, IPrint, ITakePhoto
     {
         private int paperWidth;
         private int paperHeight;
         private double numberOfPixelsInCamera;
 
-        public Polaroid(string? modelName, decimal price, int paperWidth, int paperHeight, double numberOfPixelsInCamera): base(modelName, price)    // set initial object parameters' values overriding method of the abstract class
+        public Polaroid(string? modelName, decimal price, int paperWidth, int paperHeight, double numberOfPixelsInCamera): base(modelName, price, paperWidth, paperHeight)    // set initial object parameters' values overriding method of the abstract class
         {
-            this.paperWidth = paperWidth;
-            this.paperHeight = paperHeight;
             this.numberOfPixelsInCamera = numberOfPixelsInCamera;
         }
 

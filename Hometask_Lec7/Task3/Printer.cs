@@ -3,16 +3,12 @@ using System.Threading.Tasks;
 
 namespace Hometask_Lec7
 {
-    public class Printer: Device
+    public class Printer: PrintingDevice, IPrint
     {
         private int paperWidth;
         private int paperHeight;
 
-        public Printer(string? modelName, decimal price, int paperWidth, int paperHeight): base(modelName, price)     // set initial object parameters' values overriding method of the abstract class
-        {
-            this.paperWidth = paperWidth;
-            this.paperHeight = paperHeight;
-        }
+        public Printer(string? modelName, decimal price, int paperWidth, int paperHeight): base(modelName, price, paperWidth, paperHeight) { }    // set initial object parameters' values overriding method of the abstract class
 
         public override string Description              // getting printer's price and model name 
         {
@@ -32,4 +28,5 @@ namespace Hometask_Lec7
             Console.WriteLine("Press button at the top");
         }       
     }
+
 }

@@ -8,42 +8,42 @@ using System.Text;
 
 namespace Hometask_Lec7
 {
-    public class Base
-    {
-        static void Main()
-        {
-            Dolphin Goober = new Dolphin("dolphin", "Goobby", 3, false, "Yes");                       // creating dolphin Goober
-            Cat Murzik = new Cat("cat", "Chuchelo Miauchelo", 5, true, "short");                      // creating cat Murzik
+  //  public class Base
+  //  {
+  //      static void Main()
+  //      {
+  //          Dolphin Goober = new Dolphin("dolphin", "Goobby", 3, false, "Yes");                       // creating dolphin Goober
+  //          Cat Murzik = new Cat("cat", "Chuchelo Miauchelo", 5, true, "short");                      // creating cat Murzik
+  //
+    //        Console.WriteLine(Goober.AnimalData);                                                     // return the main data of dolphin Goober
+    //        Console.WriteLine(Murzik.AnimalData);                                                     // return the main data of cat Murzik
 
-            Console.WriteLine(Goober.AnimalData);                                                     // return the main data of dolphin Goober
-            Console.WriteLine(Murzik.AnimalData);                                                     // return the main data of cat Murzik
+    //        Dolphin.Delimiter();                                                                      // added a delimiter to make the output data more readable
 
-            Dolphin.Delimiter();                                                                      // added a delimiter to make the output data more readable
+    //        Goober.AnimalData = "Definitely yes!!!";                                                  // setting a new value to the dolphin's Goober parameter "canSwim"
+    //        Murzik.AnimalData = "long";                                                               // setting a new value to the cat's Murzik parameter "coatLength"
 
-            Goober.AnimalData = "Definitely yes!!!";                                                  // setting a new value to the dolphin's Goober parameter "canSwim"
-            Murzik.AnimalData = "long";                                                               // setting a new value to the cat's Murzik parameter "coatLength"
+    //        Console.WriteLine(Goober.AnimalData);                                                     // return the edited data of dolphin Goober
+    //        Console.WriteLine(Murzik.AnimalData);                                                     // return the edited data of cat Mursik
 
-            Console.WriteLine(Goober.AnimalData);                                                     // return the edited data of dolphin Goober
-            Console.WriteLine(Murzik.AnimalData);                                                     // return the edited data of cat Mursik
+    //        Dolphin.Delimiter();                                                                      // added a delimiter to make the output data more readable
 
-            Dolphin.Delimiter();                                                                      // added a delimiter to make the output data more readable
+    //        Console.WriteLine(Dolphin.Feed(Goober.Nickname, Goober.isHungry));                        // Feeded dolphin Goober
+    //        Console.WriteLine(Cat.Feed(Murzik.Nickname, Murzik.isHungry));                            // Feeded cat Murzik
 
-            Console.WriteLine(Dolphin.Feed(Goober.Nickname, Goober.isHungry));                        // Feeded dolphin Goober
-            Console.WriteLine(Cat.Feed(Murzik.Nickname, Murzik.isHungry));                            // Feeded cat Murzik
+    //        Dolphin.Delimiter();                                                                      // added a delimiter to make the output data more readable
 
-            Dolphin.Delimiter();                                                                      // added a delimiter to make the output data more readable
+    //        Console.WriteLine(Goober.SayHelloToTheAnimal(Goober.Nickname));                           // saying hello to Goober
+    //        Console.WriteLine(Murzik.SayHelloToTheAnimal(Murzik.Nickname));                           // saying hello to Murzik
 
-            Console.WriteLine(Goober.SayHelloToTheAnimal(Goober.Nickname));                           // saying hello to Goober
-            Console.WriteLine(Murzik.SayHelloToTheAnimal(Murzik.Nickname));                           // saying hello to Murzik
+    //        Dolphin.Delimiter();                                                                      // added a delimiter to make the output data more readable
 
-            Dolphin.Delimiter();                                                                      // added a delimiter to make the output data more readable
+    //        Console.WriteLine(Dolphin.Swim(Goober.Nickname));                                         // Dolphin Goober is swimmig
+    //        Console.WriteLine(Cat.CatIsShedding(Murzik.Nickname));                                    // Мурзик линяет
 
-            Console.WriteLine(Dolphin.Swim(Goober.Nickname));                                         // Dolphin Goober is swimmig
-            Console.WriteLine(Cat.CatIsShedding(Murzik.Nickname));                                    // Мурзик линяет
-
-            Dolphin.Delimiter();                                                                      // added a delimiter to make the output data more readable
-        }
-    }
+    //        Dolphin.Delimiter();                                                                      // added a delimiter to make the output data more readable
+    //    }
+    //}
 
     public abstract class Mammal                                                 // млекопитающие
     {
@@ -77,7 +77,7 @@ namespace Hometask_Lec7
             Console.WriteLine("\n************************************************************\n");
         }
 
-        public abstract string SayHelloToTheAnimal(string petName);               // abstract class, is overriden below
+        public abstract string SayHelloToTheAnimal(string petName);               // abstract method, is overriden below
     }
 
     public class Dolphin : Mammal

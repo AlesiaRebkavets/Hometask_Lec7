@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hometask_Lec7
     {
-        public class MobilePhone: Device
+        public class MobilePhone: Device, ITakePhoto
         {
             private double numberOfPixelsInCamera;
 

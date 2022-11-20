@@ -26,4 +26,29 @@ namespace Hometask_Lec7.Task3
             Console.WriteLine("Press Turn Off button");
         }
     }
+
+    public abstract class PrintingDevice: Device
+        // у классов Printer и Polaroid есть переменные "private int paperWidth" и "private int paperHeight" 
+        // чтобы не было дублирования кода, их нужно вынести в отдельный абстрактный класс
+        // класс Device для этого не подходит, так как в классе MobilePhone этих переменных быть не должно
+        // интерфейсы тоже не подходят, так как это не константы, а переменные величины, значения которых должен задать пользователь используя конструктор
+        // поэтому было решено создать еще один абстрактный класс, наследника класса Device
+    {
+        private int paperWidth;
+        private int paperHeight;
+        public PrintingDevice (string? modelName, decimal price, int paperWidth, int paperHeight): base(modelName, price)        // set initial object "model name" and "price" values data
+        {
+            this.paperWidth = paperWidth;
+            this.paperHeight = paperHeight;
+        }
+    }
+    interface IPrint
+    {
+        public void Print();
+    }
+
+    interface ITakePhoto
+    {
+        public void TakePhoto();
+    }
 }
