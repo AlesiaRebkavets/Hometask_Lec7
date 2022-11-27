@@ -11,7 +11,7 @@ namespace Hometask_Lec7
         {
             private double numberOfPixelsInCamera;
 
-            public MobilePhone(string? modelName, decimal price, double numberOfPixelsInCamera): base(modelName, price)   // set initial object parameters' values overriding method of the abstract class
+            public MobilePhone(string modelName, decimal price, double numberOfPixelsInCamera): base(modelName, price)   // set initial object parameters' values overriding method of the abstract class
             {
                 this.numberOfPixelsInCamera = numberOfPixelsInCamera;
             }

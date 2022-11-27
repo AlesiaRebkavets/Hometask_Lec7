@@ -9,9 +9,9 @@ namespace Hometask_Lec7.Task3
     public abstract class Device 
     { 
 
-        public string? modelName;
+        public string modelName;
         public decimal price;
-        public Device(string? modelName, decimal price)        // set initial object "model name" and "price" values data
+        public Device(string modelName, decimal price)         // set initial object "model name" and "price" values data
         {
             this.modelName = modelName;
             this.price = price;
@@ -36,7 +36,7 @@ namespace Hometask_Lec7.Task3
     {
         private int paperWidth;
         private int paperHeight;
-        public PrintingDevice (string? modelName, decimal price, int paperWidth, int paperHeight): base(modelName, price)        // set initial object "model name" and "price" values data
+        public PrintingDevice (string modelName, decimal price, int paperWidth, int paperHeight): base(modelName, price)        // set initial object "model name" and "price" values data
         {
             this.paperWidth = paperWidth;
             this.paperHeight = paperHeight;
@@ -46,7 +46,7 @@ namespace Hometask_Lec7.Task3
     {
         public void Print()
         {
-            Console.WriteLine("Printing...");                // outputs printing action
+            Console.WriteLine("Printing...\n");                // outputs printing action
         }
     }
 

@@ -9,7 +9,7 @@ namespace Hometask_Lec7
         private int paperHeight;
         private double numberOfPixelsInCamera;
 
-        public Polaroid(string? modelName, decimal price, int paperWidth, int paperHeight, double numberOfPixelsInCamera): base(modelName, price, paperWidth, paperHeight)    // set initial object parameters' values overriding method of the abstract class
+        public Polaroid(string modelName, decimal price, int paperWidth, int paperHeight, double numberOfPixelsInCamera): base(modelName, price, paperWidth, paperHeight)    // set initial object parameters' values overriding method of the abstract class
         {
             this.numberOfPixelsInCamera = numberOfPixelsInCamera;
         }

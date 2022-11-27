@@ -30,8 +30,6 @@ namespace Hometask_Lec7.Task3
             polaroid2.Print();                          // output of data returning by method 'Print()' of interface 'IPrint'
             printer2.Print();
 
-            Console.WriteLine();       // добавила перевод строки чтобы красивее выводилось
-
             phone.TunrnOff();                  // turn off the deviced using method of the 'Device' class
             polaroid1.TunrnOff();
             printer1.TunrnOff();
