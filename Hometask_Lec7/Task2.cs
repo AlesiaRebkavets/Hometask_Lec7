@@ -9,33 +9,33 @@ namespace Hometask_Lec7
 {
     public class BaseClass
     {
-        //static void Main()
-        //{
-        //    IWalk Burionka = new Cow();                 // initialization of objects
-        //    Cow Glasha = new Cow();
-        //    IWalk Sharik = new Dog();
-        //    Dog Bobik = new Dog();
-        //    Fish Nemo = new Fish();
-        //    Bird Kesha = new Bird();
-        //    Butterfly Tipster = new Butterfly();
+        static void Main()
+        {
+            IWalk Burionka = new Cow();                 // initialization of objects
+            Cow Glasha = new Cow();
+            IWalk Sharik = new Dog();
+            Dog Bobik = new Dog();
+            Fish Nemo = new Fish();
+            Bird Kesha = new Bird();
+            Butterfly Tipster = new Butterfly();
 
-        //    Console.WriteLine(Glasha.MakeSound());     // output of data returning by method 'MakeSound()' for cow
-        //    Console.WriteLine(Bobik.MakeSound());      // output of data returning by method 'MakeSound()' for dog
-        //    Console.WriteLine(Kesha.MakeSound());      // output of data returning by method 'MakeSound()' for bird
+            Console.WriteLine(Glasha.MakeSound());     // output of data returning by method 'MakeSound()' for cow
+            Console.WriteLine(Bobik.MakeSound());      // output of data returning by method 'MakeSound()' for dog
+            Console.WriteLine(Kesha.MakeSound());      // output of data returning by method 'MakeSound()' for bird
 
-        //    Burionka.Speed();                          // output of data returning by method 'Speed()' of interface 'IFly'
-        //    Sharik.Speed();                            // output of data returning by method 'Speed()' of interface 'IFly'
-        //    Console.WriteLine(Glasha.Walk());          // output of data returning by method 'Walk()' for cow
-        //    Console.WriteLine(Bobik.Walk());           // output of data returning by method 'Walk()' for cow
+            Burionka.Speed();                          // output of data returning by method 'Speed()' of interface 'IFly'
+            Sharik.Speed();                            // output of data returning by method 'Speed()' of interface 'IFly'
+            Console.WriteLine(Glasha.Walk());          // output of data returning by method 'Walk()' for cow
+            Console.WriteLine(Bobik.Walk());           // output of data returning by method 'Walk()' for cow
 
-        //    Console.WriteLine(Bobik.Swim());           // output of data returning by method 'Swim()' for the dog
-        //    Console.WriteLine(Bobik.SwimmingStyle);    // getter retuns the swimming style of the dog
-        //    Console.WriteLine(Nemo.Swim());            // output of data returning by method 'Swim()' for the fish
-        //    Console.WriteLine(Nemo.SwimmingStyle);     // getter retuns the swimming style of the fish
+            Console.WriteLine(Bobik.Swim());           // output of data returning by method 'Swim()' for the dog
+            Console.WriteLine(Bobik.SwimmingStyle);    // getter retuns the swimming style of the dog
+            Console.WriteLine(Nemo.Swim());            // output of data returning by method 'Swim()' for the fish
+            Console.WriteLine(Nemo.SwimmingStyle);     // getter retuns the swimming style of the fish
 
-        //    Console.WriteLine(Kesha.Fly(Kesha.Direction));      // output of data returning by method 'Fly()' for the bird
-        //    Console.WriteLine(Tipster.Fly(Tipster.Direction));  // output of data returning by method 'Fly()' for the butterfly
-        //}
+            Console.WriteLine(Kesha.Fly(Kesha.Direction));      // output of data returning by method 'Fly()' for the bird
+            Console.WriteLine(Tipster.Fly(Tipster.Direction));  // output of data returning by method 'Fly()' for the butterfly
+        }
     }
     interface IMakeSound
     {
@@ -125,11 +125,8 @@ namespace Hometask_Lec7
 
     public class Butterfly: IFly  
     {
-        public string Direction { get { return "to the beautiful flowers"; } }   // getter returns direction of a butterfly; overrides method 'Direction' of interface 'IFly'
+        public string Direction => "to the beautiful flowers";   // getter returns direction of a butterfly; overrides method 'Direction' of interface 'IFly'
 
-        public string Fly(string direction)   // overriding method Fly of interface IFly
-        {
-            return $"Flying {direction}! \n";
-        }
+        public string Fly(string direction) => $"Flying {direction}! \n"; // overriding method Fly of interface IFly
     }
 }

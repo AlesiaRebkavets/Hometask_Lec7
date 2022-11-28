@@ -16,13 +16,8 @@ namespace Hometask_Lec7
                 this.numberOfPixelsInCamera = numberOfPixelsInCamera;
             }
 
-            public override string Description                              // getting mobile phone's price, model name and number of pixels in camera
-        {
-                get
-                {
-                    return $"Price: {price}, model: {modelName}, number of pixels in camera: {numberOfPixelsInCamera}";
-                }
-            }
+            public override string Description => $"Price: {price}, model: {modelName}, number of pixels in camera: {numberOfPixelsInCamera}"; 
+                                                                          // getting mobile phone's price, model name and number of pixels in camera
 
             public void TakePhoto()                                                     // overloaded method of interface 'ITakePhoto'
         {
