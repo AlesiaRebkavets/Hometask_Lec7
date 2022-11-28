@@ -1,50 +1,35 @@
-﻿using System.Threading.Tasks;
+﻿using Hometask_Lec7.Task3;
+using System.Threading.Tasks;
 
 namespace Hometask_Lec7
 {
-    public class Polaroid
+    public class Polaroid: PrintingDevice, IPrint, ITakePhoto
     {
         private int paperWidth;
         private int paperHeight;
         private double numberOfPixelsInCamera;
-        private string? modelName;
-        private decimal price;
 
-        public Polaroid(int paperWidth, int paperHeight, double numberOfPixelsInCamera, string? modelName, decimal price)
+        public Polaroid(string modelName, decimal price, int paperWidth, int paperHeight, double numberOfPixelsInCamera): base(modelName, price, paperWidth, paperHeight)    // set initial object parameters' values overriding method of the abstract class
         {
-            this.paperWidth = paperWidth;
-            this.paperHeight = paperHeight;
             this.numberOfPixelsInCamera = numberOfPixelsInCamera;
-            this.modelName = modelName;
-            this.price = price;
         }
 
-        public string Description
+        public override string Description                        // getting polaroid's price, model name and number of pixels in camera
         {
             get
             {
-                return $"Price: {price}, model:{modelName}, number of pixels in camera: {numberOfPixelsInCamera}";
+                return $"Price: {price}, model: {modelName}, number of pixels in camera: {numberOfPixelsInCamera}";
             }
         }
 
         public void TakePhoto()
         {
-            Console.WriteLine("Press black button at the top and photo is ready");
+            Console.WriteLine("Press black button at the top and photo is ready\n");  // overloaded method of interface 'ITakePhoto'
         }
 
-        public void Print()
-        {
-            Console.WriteLine("Printing...");
-        }
-
-        public void TurnOn()
+        public override void TurnOn()                                 // overloaded method to turn on the device
         {
             Console.WriteLine("Press right side button");
-        }
-
-        public void TunrnOff()
-        {
-            Console.WriteLine("Press Turn Off button");
         }
     }
 }
